@@ -7,12 +7,12 @@ networks:
 services:
 # was1 생성
   was1:
-    image: kimsuyoung/hello-web:latest
+    image: suyungking/hello-web:latest
     networks:
       - kosa_network
 # was2 생성
   was2:
-    image: kimsuyoung/hello-web:latest
+    image: suyungking/hello-web:latest
     networks:
       - kosa_network
 # nginx 생성
