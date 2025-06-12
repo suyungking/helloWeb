@@ -21,7 +21,7 @@ jobs:
         run: ./gradlew bootJar
 
       - name: docker image run
-        run: docker build -t ${{ secrets.USERNAME  }}/ ${{ env.REPOSITORY_NAME  }} .
+        run: docker build -t ${{ secrets.USERNAME  }}/${{ env.REPOSITORY_NAME  }} .
 
       - name: docker hub login
         uses: docker/login-action@v1
