@@ -19,7 +19,7 @@ jobs:
         run: docekr build -t suyungking/hello-web:latest .
 
       - name: docker hub login
-        uses: docekr/login-action@vl
+        uses: docker/login-action@vl
         with:
           username: ${{ secrets.USERNAME  }}
           password: ${{ secrets.PASSWORD  }}
