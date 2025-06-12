@@ -17,7 +17,7 @@ jobs:
         run: ./gradlew bootJar
 
       - name: docker image run
-        run: docker build -t suyungking/hello-web:latest .
+        run: docker build -t ${{ secrets.USERNAME  }}/hello-web:latest .
 
       - name: docker hub login
         uses: docker/login-action@v1
@@ -26,5 +26,5 @@ jobs:
           password: ${{ secrets.PASSWORD  }}
       
       - name: docker hub push
-        run: docekr push suyungking/hello-web:latest
+        run: docekr push ${{ secrets.USERNAME  }}/hello-web:latest
       
