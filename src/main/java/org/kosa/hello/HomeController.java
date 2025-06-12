@@ -13,7 +13,7 @@ public class HomeController {
 	@GetMapping("/")
 	public String index(ServletRequest request) {
 		log.info("server port = {}" , request.getServerPort());
-		return "변경 변경변경Hello world... " + request.getServerPort();
+		return "변경 변경변경 Hello world... " + request.getServerPort();
 	}
 
 }
